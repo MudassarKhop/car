@@ -12,6 +12,52 @@ body {
 	color: white;
 	text-shadow: 3px 3px 4px black;
 }
+#nav-foot {
+	position: relative;
+	left: -65%;
+	font-size: 20px;
+	font-family: "Racing Sans One", cursive;
+	color: white;
+	text-shadow: 3px 3px 4px black;
+}
+#nav-foot2 {
+	position: relative;
+	left: -28%;
+}
+#nav-foot3 {
+	position: relative;
+	left: 18%;
+}
+.fa-facebook-f {
+	color: #232729;
+}
+.fa-instagram {
+	color: #232729;
+}
+.fa-at {
+	color: #232729;
+}
+.fa-twitter {
+	color: #232729;
+}
+.fa-whatsapp {
+	color: #232729;
+}
+.fa-facebook-f:hover {
+	color: white;
+}
+.fa-instagram:hover {
+	color: white;
+}
+.fa-at:hover {
+	color: white;
+}
+.fa-twitter:hover {
+	color: white;
+}
+.fa-whatsapp:hover {
+	color: white;
+}
 #nav-link:hover {
 	color: #a4d236;
 }
@@ -39,6 +85,11 @@ body {
 	color: white;
 	border-radius: 8px;
 }
+#btn2:hover {
+	background-color: #a4d236;
+	color: white;
+	border-radius: 8px;
+}
 .nav-items:hover {
 	background-color: #a4d236;
 }
@@ -46,6 +97,9 @@ body {
 #btn {
 	color: white;
 	background-color: transparent;
+}
+#btn2 {
+	margin-top: 25px;
 }
 .border-danger {
 	color: transparent;
@@ -59,21 +113,21 @@ body {
 	align-items: center;
 	padding: 12%;
 }
-h1 {
-	text-shadow: 3px 3px 4px black;
-}
+
 #P1 {
 	text-shadow: 1px 1px 2px black;
 }
 span {
 	color: #a4d236;
+	text-shadow: 1px 1px 2px black;
 }
 
 #cars {
-	height: 60vh;
+	height: 120vh;
 	background-color: white;
 }
 #sort {
+	height: 20vh;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -82,5 +136,77 @@ span {
 	margin-bottom: -5%;
 	margin-left: auto;
 	margin-right: auto;
-	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#heading-cont {
+	position: relative;
+	top: 20%;
+}
+#slideshow {
+	margin-top: 15%;
+}
+.owl-carousel .owl-nav [class*="owl-"] {
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.owl-carousel .owl-nav [class*="owl-"].disabled:hover {
+	background-color: #d6d6d6;
+}
+.owl-carousel {
+	position: relative;
+}
+.owl-carousel .owl-next,
+.owl-carousel .owl-prev {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50%;
+	position: absolute;
+	top: 30%;
+	font-size: 20px;
+	color: #fff;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.owl-carousel .owl-prev {
+	left: -70px;
+}
+.owl-carousel .owl-next {
+	right: -70px;
+}
+#footer {
+	padding-top: 5%;
+	height: 60vh;
+	background-color: white;
+}
+#logo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#footer1 {
+	padding-top: 0%;
+	padding: 8%;
+	height: 50vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	background: #a4d236;
+}
+#footer2 {
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: -5%;
+	margin-left: auto;
+	margin-right: auto;
+	background: #6e8c27;
 }
