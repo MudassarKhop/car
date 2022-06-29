@@ -12,25 +12,6 @@
 			href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap"
 			rel="stylesheet"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-			integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-			integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<script
-			src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-			integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-			crossorigin="anonymous"
-		></script>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
 			integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
@@ -109,7 +90,7 @@
 						</li>
 						<button
 							id="btn"
-							class="button border border-light rounded "
+							class="button border border-light rounded"
 							type="button"
 						>
 							CREATE A LISTING
@@ -131,34 +112,18 @@
 		<!-- landing -->
 		<!--sort  -->
 		<div id="sort" class="card w-75 px-5">
-			<div class="card-body">
-				<h5 class="card-title fs-6">Looking For</h5>
-				<input type="text" />
-			</div>
-			<div class="card-body">
-				<h5 class="card-title fs-6">Brand</h5>
-				<input type="text" />
-			</div>
-			<div class="card-body">
-				<h5 class="card-title fs-6">Model</h5>
-				<input type="text" />
-			</div>
-			<div class="card-body">
-				<h5 class="card-title fs-6">Budget</h5>
-				<input type="text" />
-			</div>
-			<div class="card-body">
-				<button
-					id="btn2"
-					class="button border border-light rounded px-2 bg-dark my-6 fs-5 text-light"
-					type="button"
-				>
-					SEARCH
-				</button>
-			</div>
+			<select name="sort" id="sortcars" onchange="sort()">
+				<option value="All">All</option>
+				<option value="horsepower">horsepower</option>
+				<option value="top speed">top speed</option>
+				<option value="price">price</option>
+				<option value="color">color</option>
+			</select>
 		</div>
+
 		<section id="cars">
-			<div id="heading-cont">
+			<div id="missing"></div>
+			<div id="heading-cont" class="text text center my-5">
 				<h1 id="cars-head" class="text text-center">
 					Discover Our New Automobiles
 				</h1>
@@ -167,202 +132,8 @@
 					repellat laborum, harum architecto cupiditate nisi, ea iusto
 				</p>
 			</div>
-			<div id="slideshow">
-				<!-- TESTIMONIALS -->
-				<section id="testimonials" class="testimonials spad">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12">
-								<div id="customers-testimonials" class="owl-carousel">
-									<!--TESTIMONIAL 1 -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="/ferrari.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Ferrari 458</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--END OF TESTIMONIAL 1 -->
-									<!--TESTIMONIAL 2 -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="/mclaren2.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Mclaren P1</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--END OF TESTIMONIAL 2 -->
-									<!--TESTIMONIAL 3 -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="/sian.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Lamborghini Sian</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--END OF TESTIMONIAL 3 -->
-									<!--TESTIMONIAL 4 -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="/aventador.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Lamborghini Aventador</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--END OF TESTIMONIAL 4 -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="ferrari 2.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Ferrari Pista</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- 5 -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="/ferrari3.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Ferrari 458</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- 6 -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="/mclaren.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Mclaren P1</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- 7 -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="merc.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Mercedes GT</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--8  -->
-									<div class="staff">
-										<div class="shadow-effect">
-											<div class="card" style="width: 18rem">
-												<img
-													class="card-img-top"
-													src="/maserati.jpg"
-													alt="Card image cap"
-												/>
-												<div class="card-body">
-													<h5 class="card-title">Maserati BirdCage</h5>
-													<p class="card-text">
-														Some quick example text to build on the card title
-														and make up the bulk of the card's content.
-													</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- END OF TESTIMONIALS -->
+			<div class="container">
+				<div id="target" class="jeff d-flex justify-content-center row"></div>
 			</div>
 		</section>
 		<section id="footer">
@@ -461,9 +232,15 @@
 							<p>Join our newsletter to catch our great deals.</p>
 							<div class="input-group mb-3">
 								<span class="input-group-text" id="basic-addon1">@</span>
-								<input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
-							  </div>
-							
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Email"
+									aria-label="Email"
+									aria-describedby="basic-addon1"
+								/>
+							</div>
+
 							<p>Muda Autohaus® is a premium luxury automobile dealership.</p>
 							<p id="missing">.</p>
 						</div>
@@ -496,37 +273,6 @@
 			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
 			crossorigin="anonymous"
 		></script>
-		<script>
-			jQuery(document).ready(function ($) {
-				"use strict";
-				$("#customers-testimonials").owlCarousel({
-					loop: true,
-					center: true,
-					items: 3,
-					margin: 30,
-					autoplay: true,
-					dots: true,
-					nav: true,
-					autoplayTimeout: 8500,
-					smartSpeed: 450,
-					navText: [
-						'<i class="fa fa-angle-left"></i>',
-						'<i class="fa fa-angle-right"></i>',
-					],
-					responsive: {
-						0: {
-							items: 1,
-						},
-						768: {
-							items: 2,
-						},
-						1170: {
-							items: 3,
-						},
-					},
-				});
-			});
-		</script>
 		<script src="/java.js"></script>
 	</body>
 </html>
