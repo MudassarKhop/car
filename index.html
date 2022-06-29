@@ -119,13 +119,24 @@
 				<option value="price">price</option>
 				<option value="color">color</option>
 			</select>
+			<select name="sort" id="filcars" onchange="filter()">
+				<option value="All">All</option>
+				<option value="Ferrari">Ferrari</option>
+				<option value="Lamborghini">Lamborghini</option>
+				<option value="Maserati">Maserati</option>
+				<option value="Mercedes">Mercedes</option>
+				<option value="Mclaren">Mclaren</option>
+				<option value="Nissan">Nissan</option>
+				<option value="Bentley">Bentley</option>
+				<option value="Rolls Royce">Rolls Royce</option>
+			</select>
 		</div>
 
 		<section id="cars">
 			<div id="missing"></div>
 			<div id="heading-cont" class="text text center my-5">
 				<h1 id="cars-head" class="text text-center">
-					Discover Our New Automobiles
+					Discover Our New <span>Automobiles</span>
 				</h1>
 				<p class="text text-center">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quae

@@ -4,6 +4,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "1",
 				title: "Lamborghini Aventador",
+				brand: "Lamborghini",
 				description: "From the Italian giants, supercar from heaven",
 				color: "Professional",
 				horsepower: "750",
@@ -14,6 +15,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "2",
 				title: "Ferrari Pista",
+				brand: "Ferrari",
 				description: "Ferrari's latest edition to their vast catalogue",
 				color: "Professional",
 				horsepower: "550",
@@ -24,6 +26,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "3",
 				title: "Ferrari 458",
+				brand: "Ferrari",
 				description:
 					"Completed modified beast, shipped in for fast and the furious",
 				color: "Sports",
@@ -35,6 +38,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "4",
 				title: "Maserati Birdcage",
+				brand: "Maserati",
 				description: "Maserati's spin on concept cars brought to life",
 				color: "Professional",
 				horsepower: "400",
@@ -45,6 +49,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "5",
 				title: "Mclaren P1",
+				brand: "Mclaren",
 				description: "Legendary Mclaren P1 with its signature butterfly doors",
 				color: "Sports",
 				horsepower: "750",
@@ -55,9 +60,10 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "6",
 				title: "Mclaren P1 Blue",
+				brand: "Mclaren",
 				description: "Legendary Mclaren P1 with its signature butterfly doors",
 				color: "Sports",
-				horsepower: "750",
+				horsepower: "680",
 				topSpeed: "290",
 				price: "1.9",
 				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/mclaren2.jpg",
@@ -65,9 +71,10 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "7",
 				title: "Mercedes GT",
+				brand: "Mercedes",
 				description: "Be classy but sporty with the new Mercedes GT",
 				color: "Sports",
-				horsepower: "750",
+				horsepower: "500",
 				topSpeed: "290",
 				price: "1.9",
 				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/merc.jpg",
@@ -75,6 +82,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "8",
 				title: "Lamborghini Sian",
+				brand: "Lamborghini",
 				description: "One of 19 in the world, this car is special",
 				color: "Sports",
 				horsepower: "750",
@@ -85,6 +93,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "9",
 				title: "Ferrari 458 Yellow",
+				brand: "Ferrari",
 				description: "Stock Ferrari 458, shipped in from Italy",
 				color: "Sports",
 				horsepower: "750",
@@ -95,32 +104,35 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 			{
 				id: "10",
 				title: "Bentley",
+				brand: "Bentley",
 				description: "Luxury but fast",
 				color: "professional",
 				horsepower: "250",
 				topSpeed: "190",
 				price: "1.3",
-				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/ferrari3.jpg",
+				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/bentley.jpg",
 			},
 			{
 				id: "11",
 				title: "Rolls Royce Phantom",
+				brand: "Rolls Royce",
 				description: "Epitome of class.",
 				color: "Professional",
 				horsepower: "250",
 				topSpeed: "170",
 				price: "1.9",
-				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/ferrari3.jpg",
+				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/RR.jpg",
 			},
 			{
 				id: "12",
 				title: "Nissan GTR GODZILLA",
+				brand: "Nissan",
 				description: "You already know.",
 				color: "Sports",
 				horsepower: "950",
 				topSpeed: "390",
 				price: "2.4",
-				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/ferrari3.jpg",
+				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/gtr.jpg",
 			},
 	  ];
 localStorage.setItem("cars", JSON.stringify(cars));
@@ -243,3 +255,31 @@ function sort() {
 		});
 	}
 }
+filter = () => {
+	let FilterOption = document.querySelector("#filcars").value;
+	if (FilterOption !== "all") {
+		console.log(FilterOption);
+		document.querySelector("#target").innerHTML = "";
+		let specificView = cars.filter((car) => car.brand == FilterOption);
+		specificView.forEach((car) => {
+			document.querySelector("#target").innerHTML += `
+        <div id="cards" class="card col-lg-4" style="width: 18rem">
+        <img src= ${car.img} class="card-img-top"  />
+        <div class="card-body">
+        <h5 class="card-title">${car.title}</h5>
+        <p class="card-text">
+       ${car.description}
+        </p>
+         <p><i class="fa-solid fa-bolt-lightning"></i> ${car.topSpeed}km/h</p>
+        <p><i class="fa-solid fa-horse-head"></i> ${car.horsepower}hp</p>
+        <p><i class="fa-solid fa-dollar-sign"></i> ${car.price}M</p>
+        <p><i class="fa-solid fa-droplet"></i> ${car.color}</p>
+        </div>
+        </div>
+        `;
+			console.log(specificView);
+		});
+	} else {
+		display();
+	}
+};
