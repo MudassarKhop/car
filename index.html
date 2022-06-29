@@ -130,6 +130,10 @@
 				<option value="Bentley">Bentley</option>
 				<option value="Rolls Royce">Rolls Royce</option>
 			</select>
+			<form action="post" onsubmit="event.preventDefault()">
+				<input type="text" name="" id="search" placeholder="Search" />
+				<button onclick="searchCars()">Go</button>
+			</form>
 		</div>
 
 		<section id="cars">
