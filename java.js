@@ -92,6 +92,36 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 				price: "1.9",
 				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/ferrari3.jpg",
 			},
+			{
+				id: "10",
+				title: "Bentley",
+				description: "Luxury but fast",
+				color: "professional",
+				horsepower: "250",
+				topSpeed: "190",
+				price: "1.3",
+				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/ferrari3.jpg",
+			},
+			{
+				id: "11",
+				title: "Rolls Royce Phantom",
+				description: "Epitome of class.",
+				color: "Professional",
+				horsepower: "250",
+				topSpeed: "170",
+				price: "1.9",
+				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/ferrari3.jpg",
+			},
+			{
+				id: "12",
+				title: "Nissan GTR GODZILLA",
+				description: "You already know.",
+				color: "Sports",
+				horsepower: "950",
+				topSpeed: "390",
+				price: "2.4",
+				img: "https://raw.githubusercontent.com/MudassarKhop/car/main/ferrari3.jpg",
+			},
 	  ];
 localStorage.setItem("cars", JSON.stringify(cars));
 display = () => {
