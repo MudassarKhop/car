@@ -49,22 +49,53 @@
 							style="--bs-scroll-height: 100px justify-content-center"
 						>
 							<li id="nav-link1" class="nav-item px-3">
-								<select name="sort" id="sortcars" onchange="sort()">
+								<select name="sort" id="filcars2" onchange="filter2()" style="
+								height: 30px;
+								width: 125px;
+								border-radius: 12px;
+								background-color: #232729;
+								color: white;
+								border: 2px #a4d236;
+							">
+									<option value="All">Color</option>
+									<option value="Sports">Sports</option>
+									<option value="Professional">Professional</option>
+								</select>
+							</li>
+							<li id="nav-link1" class="nav-item px-3">
+								<select
+									name="sort"
+									id="sortcars"
+									onchange="sort()"
+									style="
+										height: 30px;
+										width: 140px;
+										border-radius: 12px;
+										background-color: #232729;
+										color: white;
+										border: 2px #a4d236;
+									"
+								>
 									<option value="All">SORT</option>
 									<option value="horsepower">HORSEPOWER (dec)</option>
 									<option value="top speed">TOP SPEED (dec)</option>
 									<option value="price">PRICE (dec)</option>
-									<option value="color">COLOR (Sport/Professional)</option>
 								</select>
 							</li>
-							<li>
-								<form action="post" onsubmit="event.preventDefault()">
-									<input type="text" name="" id="search" placeholder="Search" />
-									<button onclick="searchCars()">Go</button>
-								</form>
-							</li>
 							<li id="nav-link" class="nav-item px-3">
-								<select name="sort" id="filcars" onchange="filter()">
+								<select
+									name="sort"
+									id="filcars"
+									onchange="filter()"
+									style="
+										height: 30px;
+										width: 125px;
+										border-radius: 12px;
+										background-color: #232729;
+										color: white;
+										border: 2px #a4d236;
+									"
+								>
 									<option value="All">Filter (Brands)</option>
 									<option value="Ferrari">Ferrari</option>
 									<option value="Lamborghini">Lamborghini</option>
@@ -77,14 +108,23 @@
 								</select>
 							</li>
 							<!-- Button trigger modal -->
-							<button
-								type="button"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#exampleModal"
-							>
-								ADD
-							</button>
+							<li>
+								<button
+									type="button"
+									class="btn btn-primary"
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+									style="
+										height: 30px;
+										width: 100px;
+										background-color: #232729;
+										color: white;
+										border: 2px #a4d236;
+									"
+								>
+									ADD
+								</button>
+							</li>
 
 							<!-- Modal -->
 							<div

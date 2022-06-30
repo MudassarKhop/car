@@ -106,7 +106,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 				title: "Bentley",
 				brand: "Bentley",
 				description: "Luxury but fast",
-				color: "professional",
+				color: "Professional",
 				horsepower: "250",
 				topSpeed: "190",
 				price: "1.3",
@@ -211,6 +211,32 @@ filter = () => {
 		display();
 	}
 };
+filter2 = () => {
+	let FilterOption = document.querySelector("#filcars2").value;
+	if (FilterOption !== "all") {
+		console.log(FilterOption);
+		document.querySelector("#target").innerHTML = "";
+		let specificView = cars.filter((item) => item.color == FilterOption);
+		specificView.forEach((item) => {
+			document.querySelector("#target").innerHTML += `
+			<td>${item.id}</td>
+			<td>${item.title}</td>
+			<td>${item.brand}</td>
+			<td>${item.description}</td>
+			<td>${item.color}</td>
+			<td>${item.horsepower}</td>
+			<td>${item.topSpeed}</td>
+			<td>$${item.price}M</td>
+			<td>${item.img}</td>
+			<td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+			</tr>
+        `;
+			console.log(specificView);
+		});
+	} else {
+		display();
+	}
+};
 function sort() {
 	if (document.querySelector("#sortcars").value == "horsepower") {
 		let horsepower = cars.sort((a, b) => {
@@ -300,16 +326,5 @@ function sort() {
 		});
 	}
 }
-searchCars = () => {
-	let SearchTerm = document.querySelector("#searchInput").value;
-	if (SearchTerm == "") {
-		alert(`enter a planet's name`);
-	} else {
-		document.querySelector("#target").innerHTML = "";
-		let item = car.find((o) => o.name === SearchTerm);
-		document.querySelector("#target").innerHTML = ` <div id="empty">
-    <h1>No Planet found</h1>
-    </div>`;
-	}
-};
+
 // <td><button type='button' onclick='carDelete(${car.id});'><i class="fa-solid fa-trash"></i></button></td>

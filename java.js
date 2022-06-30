@@ -106,7 +106,7 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 				title: "Bentley",
 				brand: "Bentley",
 				description: "Luxury but fast",
-				color: "professional",
+				color: "Professional",
 				horsepower: "250",
 				topSpeed: "190",
 				price: "1.3",
@@ -261,6 +261,34 @@ filter = () => {
 		console.log(FilterOption);
 		document.querySelector("#target").innerHTML = "";
 		let specificView = cars.filter((car) => car.brand == FilterOption);
+		specificView.forEach((car) => {
+			document.querySelector("#target").innerHTML += `
+        <div id="cards" class="card col-lg-4" style="width: 290px">
+        <img id="card-img" src= ${car.img} class="card-img-top"  />
+        <div class="card-body">
+        <h5 class="card-title">${car.title}</h5>
+        <p class="card-text">
+       ${car.description}
+        </p>
+         <p><i class="fa-solid fa-bolt-lightning"></i> ${car.topSpeed}km/h</p>
+        <p><i class="fa-solid fa-horse-head"></i> ${car.horsepower}hp</p>
+        <p><i class="fa-solid fa-dollar-sign"></i> ${car.price}M</p>
+        <p><i class="fa-solid fa-droplet"></i> ${car.color}</p>
+        </div>
+        </div>
+        `;
+			console.log(specificView);
+		});
+	} else {
+		display();
+	}
+};
+filter2 = () => {
+	let FilterOption = document.querySelector("#filcars2").value;
+	if (FilterOption !== "all") {
+		console.log(FilterOption);
+		document.querySelector("#target").innerHTML = "";
+		let specificView = cars.filter((car) => car.color == FilterOption);
 		specificView.forEach((car) => {
 			document.querySelector("#target").innerHTML += `
         <div id="cards" class="card col-lg-4" style="width: 290px">
