@@ -2,7 +2,12 @@
 	margin: 0;
 	padding: 0;
 }
-
+body {
+	background-image: url(/pexels-adrian-dorobantu-2127733.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
 .fa-bolt {
 	color: #a4d236;
 }
@@ -13,5 +18,103 @@
 	text-shadow: 3px 3px 4px black;
 }
 ul {
-	margin-left: 50%;
+	margin-left: 40%;
+}
+.fa-trash:hover {
+	color: red;
+}
+#delete {
+	color: white;
+	background-color: transparent;
+	border: none;
+}
+#modal {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#logo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#footer1 {
+	padding-top: 0%;
+	padding: 8%;
+	height: 50vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	background: #a4d236;
+}
+#footer2 {
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: -5%;
+	margin-left: auto;
+	margin-right: auto;
+	background: #6e8c27;
+}
+#footer {
+	padding-top: 5%;
+	height: 30vh;
+	background-color: #212529;
+}
+#nav-foot {
+	position: relative;
+	left: -65%;
+	font-size: 20px;
+	font-family: "Racing Sans One", cursive;
+	color: white;
+	text-shadow: 3px 3px 4px black;
+}
+#nav-foot2 {
+	position: relative;
+	left: -28%;
+}
+#nav-foot3 {
+	position: relative;
+	left: 18%;
+}
+.fa-facebook-f {
+	color: #232729;
+}
+.fa-instagram {
+	color: #232729;
+}
+.fa-at {
+	color: #232729;
+}
+.fa-twitter {
+	color: #232729;
+}
+.fa-whatsapp {
+	color: #232729;
+}
+.fa-facebook-f:hover {
+	color: white;
+}
+.fa-instagram:hover {
+	color: white;
+}
+.fa-at:hover {
+	color: white;
+}
+.fa-twitter:hover {
+	color: white;
+}
+.fa-whatsapp:hover {
+	color: white;
 }

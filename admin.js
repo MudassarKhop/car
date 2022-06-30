@@ -137,43 +137,179 @@ let cars = JSON.parse(localStorage.getItem("cars"))
 	  ];
 localStorage.setItem("cars", JSON.stringify(cars));
 display = () => {
-	document.querySelector("#target").innerHTML = "";
-	JSON.parse(localStorage.cars).forEach((car) => {
-		document.querySelector(
-			"#target"
-		).innerHTML += `<table class="table table-dark table-striped">
-				<thead>
-					<tr>
-						<th scope="col">#ID</th>
-						<th scope="col">Title</th>
-						<th scope="col">Brand</th>
-						<th scope="col">Description</th>
-                        <th scope="col">Color</th>
-						<th scope="col">Horsepower</th>
-						<th scope="col">Top Speed</th>
-						<th scope="col">Price</th>
-						<th scope="col">IMG</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						
-                        <td>${car.id}</td>
-						<td>${car.titel}</td>
-						<td>${car.brand}</td>
-						<td>${car.description}</td>
-						<td>${car.color}</td>
-						<td>${car.horsepower}</td>
-						<td>${car.topSpeed}</td>
-						<td>${car.price}</td>
-                        <td>${car.img}</td>
-                        
-					</tr>
-				
-				</tbody>
-			</table>
-       
-        `;
+	let target = document.querySelector("#target");
+	// Clear the previous data
+	target.innerHTML = "";
+	JSON.parse(localStorage.getItem("cars")).forEach((item) => {
+		target.innerHTML += `
+            <tr>
+                <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.brand}</td>
+                <td>${item.description}</td>
+                <td>${item.color}</td>
+                <td>${item.horsepower}</td>
+                <td>${item.topSpeed}</td>
+                <td>$${item.price}M</td>
+                <td>${item.img}</td>
+                <td><i class="fa-solid fa-trash" onclick="carDelete(${item.id})"></i></td>
+                </tr>
+                `;
 	});
 };
 display();
+
+function addCar() {
+	let item = {
+		id: document.querySelector("#aid").value,
+		title: document.querySelector("#atitle").value,
+		brand: document.querySelector("#abrand").value,
+		description: document.querySelector("#adescription").value,
+		color: document.querySelector("#acolor").value,
+		horsepower: document.querySelector("#ahorsepower").value,
+		topSpeed: document.querySelector("#atopspeed").value,
+		price: document.querySelector("#aprice").value,
+		img: document.querySelector("#aimg").value,
+	};
+	cars.push(item);
+	localStorage.setItem("cars", JSON.stringify(cars));
+	display(cars);
+	console.log(cars);
+}
+
+function carDelete(id) {
+	cars = cars.filter((item) => {
+		return item.id != id;
+	});
+	localStorage.setItem("cars", JSON.stringify(cars));
+	display(cars);
+	console.log();
+}
+filter = () => {
+	let FilterOption = document.querySelector("#filcars").value;
+	if (FilterOption !== "all") {
+		console.log(FilterOption);
+		document.querySelector("#target").innerHTML = "";
+		let specificView = cars.filter((car) => car.brand == FilterOption);
+		specificView.forEach((item) => {
+			document.querySelector("#target").innerHTML += `
+         <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.brand}</td>
+                <td>${item.description}</td>
+                <td>${item.color}</td>
+                <td>${item.horsepower}</td>
+                <td>${item.topSpeed}</td>
+                <td>$${item.price}M</td>
+                <td>${item.img}</td>
+                <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+        `;
+			console.log(specificView);
+		});
+	} else {
+		display();
+	}
+};
+function sort() {
+	if (document.querySelector("#sortcars").value == "horsepower") {
+		let horsepower = cars.sort((a, b) => {
+			return b.horsepower - a.horsepower;
+		});
+		let newArray = horsepower;
+		console.log(newArray);
+		document.querySelector("#target").innerHTML = "";
+		horsepower.forEach((item) => {
+			document.querySelector("#target").innerHTML += `
+         <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.brand}</td>
+                <td>${item.description}</td>
+                <td>${item.color}</td>
+                <td>${item.horsepower}</td>
+                <td>${item.topSpeed}</td>
+                <td>$${item.price}M</td>
+                <td>${item.img}</td>
+                <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+        `;
+		});
+	} else if (document.querySelector("#sortcars").value == "price") {
+		let price = cars.sort((a, b) => {
+			return b.price - a.price;
+		});
+		let newArray = price;
+		console.log(newArray);
+		document.querySelector("#target").innerHTML = "";
+		price.forEach((item) => {
+			document.querySelector("#target").innerHTML += `
+         <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.brand}</td>
+                <td>${item.description}</td>
+                <td>${item.color}</td>
+                <td>${item.horsepower}</td>
+                <td>${item.topSpeed}</td>
+                <td>$${item.price}M</td>
+                <td>${item.img}</td>
+                <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+        `;
+		});
+	} else if (document.querySelector("#sortcars").value == "top speed") {
+		let topSpeed = cars.sort((a, b) => {
+			return b.topSpeed - a.topSpeed;
+		});
+		let newArray = topSpeed;
+		console.log(newArray);
+		document.querySelector("#target").innerHTML = "";
+		topSpeed.forEach((item) => {
+			document.querySelector("#target").innerHTML += `
+         <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.brand}</td>
+                <td>${item.description}</td>
+                <td>${item.color}</td>
+                <td>${item.horsepower}</td>
+                <td>${item.topSpeed}</td>
+                <td>$${item.price}M</td>
+                <td>${item.img}</td>
+                <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+        `;
+		});
+	} else if (document.querySelector("#sortcars").value == "color") {
+		let color = cars.sort((a, b) => (a.color > b.color ? 1 : -1));
+		let newArray = color;
+		console.log(newArray);
+		document.querySelector("#target").innerHTML = "";
+		color.forEach((item) => {
+			document.querySelector("#target").innerHTML += `
+        <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.brand}</td>
+                <td>${item.description}</td>
+                <td>${item.color}</td>
+                <td>${item.horsepower}</td>
+                <td>${item.topSpeed}</td>
+                <td>$${item.price}M</td>
+                <td>${item.img}</td>
+                <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+        `;
+		});
+	}
+}
+searchCars = () => {
+	let SearchTerm = document.querySelector("#searchInput").value;
+	if (SearchTerm == "") {
+		alert(`enter a planet's name`);
+	} else {
+		document.querySelector("#target").innerHTML = "";
+		let item = car.find((o) => o.name === SearchTerm);
+		document.querySelector("#target").innerHTML = ` <div id="empty">
+    <h1>No Planet found</h1>
+    </div>`;
+	}
+};
+// <td><button type='button' onclick='carDelete(${car.id});'><i class="fa-solid fa-trash"></i></button></td>
