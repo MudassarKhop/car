@@ -199,12 +199,37 @@ h2 {
 #missing {
 	padding-bottom: 5%;
 }
-select {
-}
 option {
 	font-family: "Racing Sans One", cursive;
 }
 #cards:hover {
 	box-shadow: 20px 20px 60px #a4d236, -10px -10px 30px #000000;
 	transition: box-shadow 1s;
+}
+@media only screen and (max-width: 992px) {
+	#nav-head {
+		margin-left: 32%;
+		font-size: 30px;
+		font-family: "Racing Sans One", cursive;
+		color: white;
+		text-shadow: 3px 3px 4px black;
+	}
+	#sort {
+		box-shadow: 20px 20px 60px #000000, -20px -20px 60px #000000;
+		height: 20vh;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: -5%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	select {
+		margin-top: 10%;
+	}
+	#profile {
+		display: none;
+	}
 }

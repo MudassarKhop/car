@@ -140,8 +140,8 @@ display = () => {
 	document.querySelector("#target").innerHTML = "";
 	JSON.parse(localStorage.cars).forEach((car) => {
 		document.querySelector("#target").innerHTML += `
-        <div id="cards" class="card col-lg-4" style="width: 18rem">
-        <img src= ${car.img} class="card-img-top"  />
+        <div id="cards" class="card col-lg-4" style="width: 290px">
+        <img id="card-img" src= ${car.img} class="card-img-top"  />
         <div class="card-body">
         <h5 class="card-title">${car.title}</h5>
         <p class="card-text">
@@ -168,8 +168,8 @@ function sort() {
 		document.querySelector("#target").innerHTML = "";
 		horsepower.forEach((car) => {
 			document.querySelector("#target").innerHTML += `
-        <div id="cards" class="card col-lg-4" style="width: 18rem">
-        <img src= ${car.img} class="card-img-top"  />
+        <div id="cards" class="card col-lg-4" style="width: 290px">
+        <img id="card-img" src= ${car.img} class="card-img-top"  />
         <div class="card-body">
         <h5 class="card-title">${car.title}</h5>
         <p class="card-text">
@@ -192,7 +192,7 @@ function sort() {
 		document.querySelector("#target").innerHTML = "";
 		price.forEach((car) => {
 			document.querySelector("#target").innerHTML += `
-        <div id="cards" class="card col-lg-4" style="width: 18rem">
+        <div id="cards" class="card col-lg-4" style="width: 290px">
         <img src= ${car.img} class="card-img-top"  />
         <div class="card-body">
         <h5 class="card-title">${car.title}</h5>
@@ -216,8 +216,8 @@ function sort() {
 		document.querySelector("#target").innerHTML = "";
 		topSpeed.forEach((car) => {
 			document.querySelector("#target").innerHTML += `
-        <div id="cards" class="card col-lg-4" style="width: 18rem">
-        <img src= ${car.img} class="card-img-top"  />
+        <div id="cards" class="card col-lg-4" style="width: 290px">
+        <img id="card-img" src= ${car.img} class="card-img-top"  />
         <div class="card-body">
         <h5 class="card-title">${car.title}</h5>
         <p class="card-text">
@@ -238,8 +238,8 @@ function sort() {
 		document.querySelector("#target").innerHTML = "";
 		color.forEach((car) => {
 			document.querySelector("#target").innerHTML += `
-        <div id="cards" class="card col-lg-4" style="width: 18rem">
-        <img src= ${car.img} class="card-img-top"  />
+        <div id="cards" class="card col-lg-4" style="width: 290px">
+        <img id="card-img"  src= ${car.img} class="card-img-top"  />
         <div class="card-body">
         <h5 class="card-title">${car.title}</h5>
         <p class="card-text">
@@ -263,8 +263,8 @@ filter = () => {
 		let specificView = cars.filter((car) => car.brand == FilterOption);
 		specificView.forEach((car) => {
 			document.querySelector("#target").innerHTML += `
-        <div id="cards" class="card col-lg-4" style="width: 18rem">
-        <img src= ${car.img} class="card-img-top"  />
+        <div id="cards" class="card col-lg-4" style="width: 290px">
+        <img id="card-img" src= ${car.img} class="card-img-top"  />
         <div class="card-body">
         <h5 class="card-title">${car.title}</h5>
         <p class="card-text">
@@ -281,5 +281,17 @@ filter = () => {
 		});
 	} else {
 		display();
+	}
+};
+searchCars = () => {
+	let SearchTerm = document.querySelector("#search").value;
+	if (SearchTerm == "") {
+		alert(`enter a cars's name`);
+	} else {
+		document.querySelector("#target").innerHTML = "";
+		let item = cars.find((o) => o.name === SearchTerm);
+		document.querySelector("#target").innerHTML = ` <div id="empty">
+    <h1>No Cars Found</h1>
+    </div>`;
 	}
 };

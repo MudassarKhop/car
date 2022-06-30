@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.fa-bolt {
+	color: #a4d236;
+}
+#nav-head {
+	font-size: 30px;
+	font-family: "Racing Sans One", cursive;
+	color: white;
+	text-shadow: 3px 3px 4px black;
+}
+ul {
+	margin-left: 50%;
+}
