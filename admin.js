@@ -206,7 +206,7 @@ filter = () => {
                 <td>$${item.price}M</td>
 				<td id="url" style="display: flex;
 				flex-direction: column;
-				flex-wrap: wrap;
+				flex-wrap: wrap; overflow: scroll ;
 				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
 					
@@ -236,7 +236,7 @@ filter2 = () => {
 			<td>$${item.price}M</td>
 			<td id="url" style="display: flex;
 			flex-direction: column;
-			flex-wrap: wrap;
+			flex-wrap: wrap; overflow: scroll;
 			">${item.img}</td>
 			<td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
 			</tr>
@@ -267,7 +267,7 @@ function sort() {
                 <td>$${item.price}M</td>
 				<td id="url" style="display: flex;
 				flex-direction: column;
-				flex-wrap: wrap;
+				flex-wrap: wrap; overflow: scroll;
 				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
 				
@@ -293,7 +293,7 @@ function sort() {
                 <td>$${item.price}M</td>
 				<td id="url" style="display: flex;
 				flex-direction: column;
-				flex-wrap: wrap;
+				flex-wrap: wrap; overflow: scroll;
 				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
 				
@@ -319,7 +319,7 @@ function sort() {
                 <td>$${item.price}M</td>
 				<td id="url" style="display: flex;
 				flex-direction: column;
-				flex-wrap: wrap;
+				flex-wrap: wrap; overflow: scroll;
 				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
 				
@@ -343,7 +343,7 @@ function sort() {
                 <td>$${item.price}M</td>
 				<td id="url" style="display: flex;
 				flex-direction: column;
-				flex-wrap: wrap;
+				flex-wrap: wrap; overflow: scroll;
 				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
                 </tr>
@@ -370,7 +370,7 @@ function sort2() {
 			<td>$${car.price}M</td>
 			<td id="url" style="display: flex;
 			flex-direction: column;
-			flex-wrap: wrap;
+			flex-wrap: wrap; overflow: scroll;
 			">${item.img}</td>
 			<td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
 			</tr>
