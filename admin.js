@@ -361,6 +361,7 @@ function sort2() {
 		document.querySelector("#target").innerHTML = "";
 		price.forEach((car) => {
 			document.querySelector("#target").innerHTML += `
+			<td>${car.id}</td>
 			<td>${car.title}</td>
 			<td>${car.brand}</td>
 			<td>${car.description}</td>
