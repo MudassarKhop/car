@@ -153,7 +153,7 @@ display = () => {
                 <td>$${item.price}M</td>
                 <td id="url" style="display: flex;
 				flex-direction: column;
-				flex-wrap: wrap;
+				flex-wrap: wrap; overflow: scroll;
 				">${item.img}</td>
                 <td><i class="fa-solid fa-trash" onclick="carDelete(${item.id})"></i></td>
                 </tr>
