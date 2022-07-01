@@ -371,7 +371,7 @@ function sort2() {
 			<td id="url" style="display: flex;
 			flex-direction: column;
 			flex-wrap: wrap; overflow: scroll;
-			">${item.img}</td>
+			">${car.img}</td>
 			<td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
 			</tr>
 		`;
