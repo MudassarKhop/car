@@ -48,9 +48,30 @@
 						class="navbar-nav me-auto my-4 my-lg-0 navbar-nav-scroll"
 						style="--bs-scroll-height: 100px justify-content-center"
 						>
+						<li id="nav-link1" class="nav-item px-3">
+							<h5 class="card-title text-light">Sort By: Desc</h5>
+							<select
+								name="sort"
+								id="sortcars"
+								onchange="sort()"
+								style="
+									height: 30px;
+									width: 140px;
+									border-radius: 12px;
+									background-color: #232729;
+									color: white;
+									border: 2px #a4d236;
+								"
+							>
+								<option value="All">SORT</option>
+								<option value="horsepower">HORSEPOWER (dec)</option>
+								<option value="top speed">TOP SPEED (dec)</option>
+							</select>
+						</li>
 						<li>
 							<div class="card-body">
-								<h5 class="card-title">Price: Desc</h5>
+								<h5 class="card-title text-light">Price: Desc</h5>
+
 								<select name="sort" id="filcars3" onchange="sort2()" style=" height: 30px;
 								width: 140px;
 								border-radius: 12px;
@@ -62,40 +83,8 @@
 								</select>
 							</div>
 						</li>
-							<li id="nav-link1" class="nav-item px-3">
-								<select name="sort" id="filcars2" onchange="filter2()" style="
-								height: 30px;
-								width: 125px;
-								border-radius: 12px;
-								background-color: #232729;
-								color: white;
-								border: 2px #a4d236;
-							">
-									<option value="All">Color</option>
-									<option value="Sports">Sports</option>
-									<option value="Professional">Professional</option>
-								</select>
-							</li>
-							<li id="nav-link1" class="nav-item px-3">
-								<select
-									name="sort"
-									id="sortcars"
-									onchange="sort()"
-									style="
-										height: 30px;
-										width: 140px;
-										border-radius: 12px;
-										background-color: #232729;
-										color: white;
-										border: 2px #a4d236;
-									"
-								>
-									<option value="All">SORT</option>
-									<option value="horsepower">HORSEPOWER (dec)</option>
-									<option value="top speed">TOP SPEED (dec)</option>
-								</select>
-							</li>
 							<li id="nav-link" class="nav-item px-3">
+								<h5 class="card-title text-light">Brand:</h5>
 								<select
 									name="sort"
 									id="filcars"
@@ -118,6 +107,22 @@
 									<option value="Nissan">Nissan</option>
 									<option value="Bentley">Bentley</option>
 									<option value="Rolls Royce">Rolls Royce</option>
+								</select>
+							</li>
+							<li id="nav-link1" class="nav-item px-3">
+								<h5 class="card-title text-light">Paintjob:</h5>
+
+								<select name="sort" id="filcars2" onchange="filter2()" style="
+								height: 30px;
+								width: 125px;
+								border-radius: 12px;
+								background-color: #232729;
+								color: white;
+								border: 2px #a4d236;
+							">
+									<option value="All">Color</option>
+									<option value="Sports">Sports</option>
+									<option value="Professional">Professional</option>
 								</select>
 							</li>
 							<!-- Button trigger modal -->
