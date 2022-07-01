@@ -311,15 +311,28 @@ filter2 = () => {
 		display();
 	}
 };
-searchCars = () => {
-	let SearchTerm = document.querySelector("#search").value;
-	if (SearchTerm == "") {
-		alert(`enter a cars's name`);
-	} else {
-		document.querySelector("#target").innerHTML = "";
-		let item = cars.find((o) => o.name === SearchTerm);
-		document.querySelector("#target").innerHTML = ` <div id="empty">
-    <h1>No Cars Found</h1>
-    </div>`;
-	}
-};
+	function sort2() {
+		if (document.querySelector("#filcars3").value == "price") {
+			let price = cars.sort((a, b) => {
+				return b.price - a.price;
+			});
+			let newArray = price;
+			console.log(newArray);
+			document.querySelector("#target").innerHTML = "";
+			price.forEach((car) => {
+				document.querySelector("#target").innerHTML += `
+			<div id="cards" class="card col-lg-4" style="width: 290px">
+			<img id="card-img" src= ${car.img} class="card-img-top"  />
+			<div class="card-body">
+			<h5 class="card-title">${car.title}</h5>
+			<p class="card-text">
+			${car.description}
+			</p>
+			 <p><i class="fa-solid fa-bolt-lightning"></i> ${car.topSpeed}km/h</p>
+			<p><i class="fa-solid fa-horse-head"></i> ${car.horsepower}hp</p>
+			<p><i class="fa-solid fa-dollar-sign"></i> ${car.price}M</p>
+			<p><i class="fa-solid fa-droplet"></i> ${car.color}</p>
+			</div>
+			</div>
+			`;
+			});}}

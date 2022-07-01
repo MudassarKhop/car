@@ -212,7 +212,7 @@ option {
 }
 @media only screen and (max-width: 992px) {
 	#nav-head {
-		margin-left: 32%;
+	
 		font-size: 30px;
 		font-family: "Racing Sans One", cursive;
 		color: white;
@@ -229,11 +229,38 @@ option {
 		margin-bottom: -5%;
 		margin-left: auto;
 		margin-right: auto;
+		height: auto;
 	}
 	select {
 		margin-top: 10%;
 	}
-	#profile {
+	
+	#logo {
 		display: none;
+	}
+	#footer1 {
+		display: none;
+	}
+	#nav-foot{
+	
+		position: relative;
+		left: 0%;
+		right: 0%;
+
+	}
+	#nav-foot2 {
+		display: none;
+	}
+	#nav-foot3 {
+		display: none;
+	}
+	#footer {
+		height: auto;
+	}
+	#footer1 {
+		height: auto;
+	}
+	#footer2 {
+		height: auto;
 	}
 }

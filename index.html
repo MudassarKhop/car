@@ -84,18 +84,11 @@
 								data-bs-toggle="tooltip"
 								data-bs-placement="top"
 								data-bs-custom-class="custom-tooltip"
-								title="0 FAVOURITES"
+								title="Access Admin Page"
 							>
-								<i class="fa-solid fa-user"></i>
+								<a href="/admin.html"><i class="fa-solid fa-user"></i></a>
 							</button>
 						</li>
-						<button
-							id="btn"
-							class="button border border-light rounded"
-							type="button"
-						>
-							CREATE A LISTING
-						</button>
 					</ul>
 				</div>
 			</div>
@@ -120,6 +113,13 @@
 					<option value="All">All</option>
 					<option value="horsepower">HORSEPOWER</option>
 					<option value="top speed">TOP SPEED</option>
+					<option value="price">PRICE</option>
+				</select>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">Price: Desc</h5>
+				<select name="sort" id="filcars3" onchange="sort2()">
+					<option value="All">All</option>
 					<option value="price">PRICE</option>
 				</select>
 			</div>

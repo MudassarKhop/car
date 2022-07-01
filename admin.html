@@ -29,7 +29,7 @@
 				class="navbar navbar-expand-lg bg-transparent border-bottom border-light"
 			>
 				<div class="container-fluid bg-transparent">
-					<a id="nav-head" class="navbar-brand" href="#"
+					<a id="nav-head" class="navbar-brand" href="/index.html"
 						><i class="fa-solid fa-bolt"></i>Muda Autohaus</a
 					>
 					<button
@@ -40,14 +40,28 @@
 						aria-controls="navbarScroll"
 						aria-expanded="false"
 						aria-label="Toggle navigation"
-					>
+						>
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarScroll">
 						<ul
-							class="navbar-nav me-auto my-4 my-lg-0 navbar-nav-scroll"
-							style="--bs-scroll-height: 100px justify-content-center"
+						class="navbar-nav me-auto my-4 my-lg-0 navbar-nav-scroll"
+						style="--bs-scroll-height: 100px justify-content-center"
 						>
+						<li>
+							<div class="card-body">
+								<h5 class="card-title">Price: Desc</h5>
+								<select name="sort" id="filcars3" onchange="sort2()" style=" height: 30px;
+								width: 140px;
+								border-radius: 12px;
+								background-color: #232729;
+								color: white;
+								border: 2px #a4d236;">
+									<option value="All">All</option>
+									<option value="price">PRICE</option>
+								</select>
+							</div>
+						</li>
 							<li id="nav-link1" class="nav-item px-3">
 								<select name="sort" id="filcars2" onchange="filter2()" style="
 								height: 30px;
@@ -79,7 +93,6 @@
 									<option value="All">SORT</option>
 									<option value="horsepower">HORSEPOWER (dec)</option>
 									<option value="top speed">TOP SPEED (dec)</option>
-									<option value="price">PRICE (dec)</option>
 								</select>
 							</li>
 							<li id="nav-link" class="nav-item px-3">
@@ -200,7 +213,7 @@
 					</div>
 				</div>
 			</nav>
-			<table class="table table-bordered border-success text-light">
+			<table class="table table-bordered border-success text-light table-responsive{-sm|-md|-lg|-xl}">
 				<thead>
 					<tr>
 						<th scope="col">ID#</th>
@@ -213,6 +226,7 @@
 						<th scope="col">Price</th>
 						<th scope="col">IMG (url)</th>
 						<th scope="col">Delete</th>
+						<th scope="col">Edit</th>
 					</tr>
 				</thead>
 				<tbody id="target"></tbody>

@@ -151,7 +151,10 @@ display = () => {
                 <td>${item.horsepower}</td>
                 <td>${item.topSpeed}</td>
                 <td>$${item.price}M</td>
-                <td>${item.img}</td>
+                <td id="url" style="display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				">${item.img}</td>
                 <td><i class="fa-solid fa-trash" onclick="carDelete(${item.id})"></i></td>
                 </tr>
                 `;
@@ -201,8 +204,12 @@ filter = () => {
                 <td>${item.horsepower}</td>
                 <td>${item.topSpeed}</td>
                 <td>$${item.price}M</td>
-                <td>${item.img}</td>
+				<td id="url" style="display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+					
                 </tr>
         `;
 			console.log(specificView);
@@ -227,7 +234,10 @@ filter2 = () => {
 			<td>${item.horsepower}</td>
 			<td>${item.topSpeed}</td>
 			<td>$${item.price}M</td>
-			<td>${item.img}</td>
+			<td id="url" style="display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			">${item.img}</td>
 			<td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
 			</tr>
         `;
@@ -255,8 +265,12 @@ function sort() {
                 <td>${item.horsepower}</td>
                 <td>${item.topSpeed}</td>
                 <td>$${item.price}M</td>
-                <td>${item.img}</td>
+				<td id="url" style="display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+				
                 </tr>
         `;
 		});
@@ -277,8 +291,12 @@ function sort() {
                 <td>${item.horsepower}</td>
                 <td>${item.topSpeed}</td>
                 <td>$${item.price}M</td>
-                <td>${item.img}</td>
+				<td id="url" style="display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+				
                 </tr>
         `;
 		});
@@ -299,8 +317,12 @@ function sort() {
                 <td>${item.horsepower}</td>
                 <td>${item.topSpeed}</td>
                 <td>$${item.price}M</td>
-                <td>${item.img}</td>
+				<td id="url" style="display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+				
                 </tr>
         `;
 		});
@@ -319,12 +341,39 @@ function sort() {
                 <td>${item.horsepower}</td>
                 <td>${item.topSpeed}</td>
                 <td>$${item.price}M</td>
-                <td>${item.img}</td>
+				<td id="url" style="display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				">${item.img}</td>
                 <td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
                 </tr>
         `;
 		});
 	}
 }
+function sort2() {
+	if (document.querySelector("#filcars3").value == "price") {
+		let price = cars.sort((a, b) => {
+			return b.price - a.price;
+		});
+		let newArray = price;
+		console.log(newArray);
+		document.querySelector("#target").innerHTML = "";
+		price.forEach((car) => {
+			document.querySelector("#target").innerHTML += `
+			<td>${car.title}</td>
+			<td>${car.brand}</td>
+			<td>${car.description}</td>
+			<td>${car.color}</td>
+			<td>${car.horsepower}</td>
+			<td>${car.topSpeed}</td>
+			<td>$${car.price}M</td>
+			<td id="url" style="display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			">${item.img}</td>
+			<td><button id="delete" type='button' onclick="carDelete(id)"><i class="fa-solid fa-trash"></i></button></td>
+			</tr>
+		`;
+		});}}
 
-// <td><button type='button' onclick='carDelete(${car.id});'><i class="fa-solid fa-trash"></i></button></td>
